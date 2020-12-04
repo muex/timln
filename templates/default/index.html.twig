@@ -11,10 +11,14 @@
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/andremuller/Documents/Projekte/timln/src/Controller/DefaultController.php'|file_link(0) }}">src/Controller/DefaultController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/andremuller/Documents/Projekte/timln/templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a></code></li>
-    </ul>
+    {{ render_chart(chart) }}
 </div>
 {% endblock %}
+
+ {% block javascripts %}
+     {{ encore_entry_script_tags('app') }}
+
+     <!-- Renders app.js & a webpack runtime.js file
+         <script src="/build/runtime.js"></script>
+         <script src="/build/app.js"></script> -->
+ {% endblock %}
