@@ -15,6 +15,29 @@ class DefaultController extends AbstractController
      */
     public function index(ChartBuilderInterface $chartBuilder): Response
     {
+        $vacation = $chartBuilder->createChart(Chart::TYPE_DOUGHNUT);
+        $vacation->setData([
+            'labels' => ['Resturlaub','Verbraucht'],
+            'datasets' => [
+                [
+                'data' => [12, 18],
+                'backgroundColor'=> ['#57FFD1', '#FF6384']
+                ]
+            ]
+        ]);
+        $vacation->setOptions([/* ... */]);
+
+        return $this->render('default/index.html.twig', [
+            'controller_name' => 'DefaultController',
+            'vacation' => $vacation
+        ]);
+    }
+
+    /**
+     * @Route("/sick/", name="sick")
+     */
+    public function sick(ChartBuilderInterface $chartBuilder): Response
+    {
         $chart = $chartBuilder->createChart(Chart::TYPE_BAR);
         $chart->setData([
             'labels' => ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober','November', 'Dezember'],
@@ -29,9 +52,9 @@ class DefaultController extends AbstractController
         ]);
         $chart->setOptions([/* ... */]);
 
-        return $this->render('default/index.html.twig', [
+        return $this->render('default/sick.html.twig', [
             'controller_name' => 'DefaultController',
-            'chart' => $chart
+            'chart' => $chart,
         ]);
     }
 }
