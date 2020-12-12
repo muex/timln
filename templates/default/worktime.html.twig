@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}timln - Krank{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h1 class="mt-4">Arbeitszeit</h1>
+        <div class="row">
+            <div class="col">
+                {{ render_chart(chart) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
