@@ -4,10 +4,59 @@
 
 {% block body %}
     <div class="container-fluid">
-        <h1 class="mt-4">Arbeitszeit</h1>
+        <h1 class="mt-4">Arbeitszeitkonto</h1>
         <div class="row">
             <div class="col">
-                {{ render_chart(chart) }}
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Datum</th>
+                            <th scope="col">Beginn</th>
+                            <th scope="col">Ende</th>
+                            <th scope="col">Arbeitszeit</th>
+                            <th scope="col">Besonderheit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>11.12.2020</td>
+                            <td>08:10</td>
+                            <td>16:40</td>
+                            <td>8 h</td>
+                            <td>AOF</td>
+                        </tr>
+                        <tr>
+                            <td>10.12.2020</td>
+                            <td>08:30</td>
+                            <td>14:30</td>
+                            <td>6 h</td>
+                            <td>AOF</td>
+                        </tr>
+                        <tr>
+                            <td>10.12.2020</td>
+                            <td>18:30</td>
+                            <td>20:30</td>
+                            <td>2 h</td>
+                            <td>AOF</td>
+                        </tr>
+                        <tr>
+                            <td>09.12.2020</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Krank</td>
+                        </tr>
+                        <tr>
+                            <td>08.12.2020</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Urlaub</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

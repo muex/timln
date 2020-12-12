@@ -4,10 +4,65 @@
 
 {% block body %}
     <div class="container-fluid">
-        <h1 class="mt-4">Urlaub</h1>
+        <h1 class="mt-4">Urlaub 2020</h1>
         <div class="row">
             <div class="col">
-                {{ render_chart(chart) }}
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Von</th>
+                            <th scope="col">Bis</th>
+                            <th scope="col">Tage</th>
+                            <th scope="col">Vertretung</th>
+                            <th scope="col">Genehmigt</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>21.12.2020</td>
+                            <td>30.12.2020</td>
+                            <td>8</td>
+                            <td>Eva Musterfrau</td>
+                            <td></td>
+                            <td>beantragt</td>
+                        </tr>
+                        <tr>
+                            <td>13.07.2020</td>
+                            <td>25.07.2020</td>
+                            <td>10</td>
+                            <td>Kai Kausen</td>
+                            <td>16.06.2020 El Jefe</td>
+                            <td>genehmigt</td>
+                        </tr>
+                        <tr>
+                            <td>08.04.2020</td>
+                            <td>08.04.2020</td>
+                            <td>1</td>
+                            <td>Eva Musterfrau</td>
+                            <td></td>
+                            <td>abgelehnt</td>
+                        </tr>
+                        <tr>
+                            <td>07.04.2020</td>
+                            <td>07.04.2020</td>
+                            <td>1</td>
+                            <td>Eva Musterfrau</td>
+                            <td>04.04.2020 El Jefe</td>
+                            <td>genehmigt</td>
+                        </tr>
+                        <tr>
+                            <td>04.02.2020</td>
+                            <td>08.02.2020</td>
+                            <td>5</td>
+                            <td>Eva Musterfrau</td>
+                            <td>04.01.2020 El Jefe</td>
+                            <td>genehmigt</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
