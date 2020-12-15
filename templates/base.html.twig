@@ -14,18 +14,18 @@
         <div class="border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">timln</div>
             <div class="list-group list-group-flush">
-                <a href="{{ path('default')}}" class="list-group-item list-group-item-action"><i class="fa fa-home mr-3"></i> Dashboard</a>
-                <a href="{{ path('worktime')}}" class="list-group-item list-group-item-action"><i class="fa fa-user-clock mr-3"></i>
+                <a href="{{ path('default')}}" class="list-group-item list-group-item-action{% if (app.request.pathInfo == path('default')) %} active{% endif %}"><i class="fa fa-home mr-3"></i> Dashboard</a>
+                <a href="{{ path('worktime')}}" class="list-group-item list-group-item-action{% if (app.request.pathInfo == path('worktime')) %} active{% endif %}"><i class="fa fa-user-clock mr-3"></i>
                     Arbeitszeit</a>
-                <a href="{{ path('vacation')}}" class="list-group-item list-group-item-action"><i class="fa fa-umbrella-beach mr-3"></i>
+                <a href="{{ path('vacation')}}" class="list-group-item list-group-item-action{% if (app.request.pathInfo == path('vacation')) %} active{% endif %}"><i class="fa fa-umbrella-beach mr-3"></i>
                     Urlaub</a>
-                <a href="{{ path('sick') }}" class="list-group-item list-group-item-action"><i class="fa fa-clinic-medical mr-3"></i>
+                <a href="{{ path('sick') }}" class="list-group-item list-group-item-action{% if (app.request.pathInfo == path('sick')) %} active{% endif %}"><i class="fa fa-clinic-medical mr-3"></i>
                     Krank</a>
-                <a href="{{ path('calendar')}}" class="list-group-item list-group-item-action"><i class="fa fa-calendar-alt mr-3"></i>
+                <a href="{{ path('calendar')}}" class="list-group-item list-group-item-action{% if (app.request.pathInfo == path('calendar')) %} active{% endif %}"><i class="fa fa-calendar-alt mr-3"></i>
                     Kalender</a>
-                <a href="{{ path('management')}}" class="list-group-item list-group-item-action"><i class="fa fa-address-book mr-3"></i>
+                <a href="{{ path('management')}}" class="list-group-item list-group-item-action{% if (app.request.pathInfo == path('management')) %} active{% endif %}"><i class="fa fa-address-book mr-3"></i>
                     Führung</a>
-                <a href="{{ path('humanresources')}}" class="list-group-item list-group-item-action"><i class="fa fa-chart-bar mr-3"></i> Personal</a>
+                <a href="{{ path('humanresources')}}" class="list-group-item list-group-item-action{% if (app.request.pathInfo == path('humanresources')) %} active{% endif %}"><i class="fa fa-chart-bar mr-3"></i> Personal</a>
             </div>
         </div>
         <div id="page-content-wrapper" class="bg-light">
